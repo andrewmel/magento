@@ -1,0 +1,15 @@
+@import url('normalize.css');
+@import url('skeleton.css');
+body
+ {	
+ 	color: #535355;
+
+ 	background:url(/skin/frontend/kass/default/images/layer.png) repeat;
+ 	 
+ }
+ a{
+ 	color: #c1c1c1;
+ }
+ .container{
+ 	background: #ffffff;
+ }
