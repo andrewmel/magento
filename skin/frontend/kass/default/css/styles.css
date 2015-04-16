@@ -10,6 +10,33 @@ body
  a{
  	color: #c1c1c1;
  }
- .container{
- 	background: #ffffff;
+ 
+ .container .main-header{
+ 	color: #535355;
  }
+/*Links*/
+.toplink .links li{
+	display: inline;
+	margin-right: 10px;
+}
+.toplink .links li a{
+	color: #535355;
+	text-decoration: none;
+}
+.main-header{
+	padding: 30px 0 0;
+}
+.main-welcome{
+	background: #535355;
+}
+.lang #select-language{
+	display: inline;
+}
+
+ /*Search bar */
+ .quick-access .form-search  label{
+ 	display: none;
+ }
+.quick-access .form-search input.input-text{
+	display: inline;
+}

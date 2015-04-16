@@ -28,20 +28,29 @@
  */
 ?>
 <div class="header-container">
-    <div class="header">
+    <div class="container main-header">
+         <div class="toplink five columns alpha"><?php echo $this->getChildHtml('topLinks') ?></div>
+         <div class="lang three columns offset-by-four omega"><?php echo $this->getChildHtml('store_language') ?></div>
+            
+    </div>
+     <div class="container main-welcome">
+        <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+        </div>
+    <header class="container main-header-two">
+    
+     
 
         <?php if ($this->getIsHomePage()):?>
-        <h1 class="logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+
+        <h1 class="logo three columns alpha"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
         <?php else:?>
-        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+        <h2 class="logo three columns alpha"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h2>
         <?php endif?>
-        <div class="quick-access">
+        <div class="quick-access five columns offset-by-three omega">
             <?php echo $this->getChildHtml('topSearch') ?>
-            <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
-            <?php echo $this->getChildHtml('topLinks') ?>
-            <?php echo $this->getChildHtml('store_language') ?>
+         
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
-    </div>
+    </header>
 </div>
 <?php echo $this->getChildHtml('topMenu') ?>
