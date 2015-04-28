@@ -55,7 +55,7 @@ body{
  }
 .quick-access .form-search input.input-text{
 	display: inline;
-	width: 75%;
+	width: 88%;
 	margin-top: 11px;
 }
 .form-search{
@@ -102,8 +102,12 @@ body{
 .nav-container{
 	background: #ffffff;
 	padding: 35px 0 0 0;
+
 }
+#nav .columns {
+    margin-left: 40%; }
 #nav {
+	display: -webkit-box;
 	padding: 0;
 	margin: 0;
 	font-size: 100%;
