@@ -29,28 +29,24 @@
 ?>
 <div class="header-container">
     <div class="container main-header">
-         <div class="toplink five columns alpha"><?php echo $this->getChildHtml('topLinks') ?></div>
-         <div class="lang three columns offset-by-four omega"><?php echo $this->getChildHtml('store_language') ?></div>
-            
+         <div class="toplink"><?php echo $this->getChildHtml('topLinks') ?></div>
+         <div class="lang"><?php echo $this->getChildHtml('store_language') ?></div>   
     </div>
-     <div class="container main-welcome">
-        <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
-        </div>
+    <div class="container main-welcome">
+        <span class="welcome-msg "><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></span>
+        <?php echo $this->getChildHtml('top_lin') ?>
+    </div>
     <header class="container main-header-two">
-    
-     
-
         <?php if ($this->getIsHomePage()):?>
-
-        <h1 class="logo three columns alpha"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+        <h1 class="logo three columns"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
         <?php else:?>
-        <h2 class="logo three columns alpha"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h2>
+        <h2 class="logo three columns"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h2>
         <?php endif?>
-        <div class="quick-access five columns offset-by-three omega">
+        <div class="quick-access">
             <?php echo $this->getChildHtml('topSearch') ?>
-         
+            <div class="nine columns "><?php echo $this->getChildHtml('topMenu') ?></div>
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </header>
 </div>
-<?php echo $this->getChildHtml('topMenu') ?>
+

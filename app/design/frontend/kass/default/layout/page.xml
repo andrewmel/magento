@@ -68,8 +68,9 @@ Default layout, loads most of the pages
 
             <block type="page/html_header" name="header" as="header">
                 <block type="page/switch" name="store_language" as="store_language" template="page/switch/languages.phtml"/>
+
                 <block type="page/template_links" name="top.links" as="topLinks"/>
-                
+                <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs" template="page/html/breadcrumbs.phtml"/>
                 <block type="core/text_list" name="top.menu" as="topMenu" translate="label">
                     <label>Navigation Bar</label>
                     <block type="page/html_topmenu" name="catalog.topnav" template="page/html/topmenu.phtml"/>
@@ -79,6 +80,8 @@ Default layout, loads most of the pages
                     <action method="setElementClass"><value>top-container</value></action>
                 </block>
                 <block type="page/html_welcome" name="welcome" as="welcome"/>
+                <block type="cms/block" name="top_lin"> <action method="setBlockId"><block_id>top_lin</block_id></action>
+                 </block> 
             </block>
 
             <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
@@ -104,8 +107,17 @@ Default layout, loads most of the pages
                     <action method="setElementClass"><value>bottom-container</value></action>
                 </block>
                 <block type="page/switch" name="store_switcher" as="store_switcher" template="page/switch/stores.phtml"/>
-                <block type="page/template_links" name="footer_links" as="footer_links" template="page/template/links.phtml"/>
+                   <block type="page/template_links" name="footer_links" as="footer_links" template="page/template/links.phtml"/>
+                   <block type="cms/block" name="reference_to_static_block"> <action method="setBlockId"><block_id>footer_links_company</block_id></action>
+                   </block> 
+                   <block type="cms/block" name="why_by_from_us"> <action method="setBlockId"><block_id>why_by_from_us</block_id></action>
+                   </block> 
+                   <block type="cms/block" name="contacts"> <action method="setBlockId"><block_id>contacts</block_id></action>
+                   </block> 
+                   <block type="cms/block" name="my_account"> <action method="setBlockId"><block_id>my_account</block_id></action>
+                   </block> 
             </block>
+               
 
             <block type="core/text_list" name="before_body_end" as="before_body_end" translate="label">
                 <label>Page Bottom</label>
