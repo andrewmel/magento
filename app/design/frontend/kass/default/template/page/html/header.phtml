@@ -44,9 +44,23 @@
         <?php endif?>
         <div class="quick-access">
             <?php echo $this->getChildHtml('topSearch') ?>
-            <div class="nine columns "><?php echo $this->getChildHtml('topMenu') ?></div>
+            
         </div>
+        <div class=""><?php echo $this->getChildHtml('topMenu') ?></div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </header>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+            $('.quick-access').css('width',$('.main-header-two').width()-180);
+            $('#search').css('width',$('.quick-access').width()-95);
+        
+    });
+       $(window).resize(function(){
+            $('.quick-access').css('width',$('.main-header-two').width()-180);
+            $('#search').css('width',$('.quick-access').width()-95);
+        
+    })
+</script>
 
